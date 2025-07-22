@@ -156,6 +156,8 @@ xcopy /Y /E /I "$(ProjectDir)assets" "$(OutDir)assets"</Command>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Fish.cpp" />
+    <ClCompile Include="FishManager.cpp" />
+    <ClCompile Include="FishManager.h" />
     <ClCompile Include="GameController.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="main.cpp" />
