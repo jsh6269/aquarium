@@ -1,13 +1,8 @@
 #include "Fish.h"
-#include <sstream>
-#include <iomanip>
 
-Fish::Fish() {
-    int index = std::rand() % 24;  // 0 ~ 23
-    std::stringstream ss;
-    ss << "assets/" << std::setw(3) << std::setfill('0') << index << ".png";
-    if (!texture.loadFromFile(ss.str())) {
-        throw std::runtime_error("Failed to load texture: " + ss.str());
+Fish::Fish(std::string path) {
+    if (!texture.loadFromFile(path)) {
+        throw std::runtime_error("Failed to load texture: " + path);
     }
     sprite.setTexture(texture);
     sprite.setScale(scale, scale);

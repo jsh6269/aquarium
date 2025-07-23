@@ -1,7 +1,12 @@
 #include "FishManager.h"
+#include <sstream>
+#include <iomanip>
 
-void FishManager::addFish(const std::shared_ptr<Fish>& fish) {
-    fishes.push_back(fish);
+void FishManager::addFish() {
+    int index = std::rand() % 24;  // 0 ~ 23
+    std::stringstream ss;
+    ss << "assets/" << std::setw(3) << std::setfill('0') << index << ".png";
+    fishes.push_back(std::make_shared<Fish>(ss.str()));
 }
 
 void FishManager::tick(float deltaTime) {

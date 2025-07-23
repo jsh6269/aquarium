@@ -6,7 +6,7 @@
 
 class Fish : public GameObject {
 public:
-    Fish();
+    Fish(std::string path);
     void tick(float deltaTime) override;
     void render(sf::RenderWindow& window) override;
 

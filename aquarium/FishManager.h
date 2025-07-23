@@ -5,7 +5,7 @@
 
 class FishManager {
 public:
-    void addFish(const std::shared_ptr<Fish>& fish);
+    void addFish();
     void tick(float deltaTime);
     void render(sf::RenderWindow& window);
 

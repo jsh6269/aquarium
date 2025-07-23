@@ -10,7 +10,7 @@ int main() {
 
     FishManager manager;
     for (int i = 0; i < 18; ++i) {
-        manager.addFish(std::make_shared<Fish>());
+        manager.addFish();
     }
 
     sf::Clock clock;
